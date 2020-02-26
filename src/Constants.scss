@@ -7,10 +7,21 @@
 }
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 $logoFont: plexifont_bvregular;
-$headingFont: Roboto;
+$headingFont: plexifont_bvregular;
+$mainFont: Roboto;
+
+
+//Navigation
 @mixin navLink($color: white) {
   text-decoration-line: none;
+  font-family: $mainFont;
+  color: $color;
+}
+
+//Headings
+@mixin pageHeading($color: #ff009e) {
   font-family: $headingFont;
+  font-weight: bold;
   color: $color;
 }
 

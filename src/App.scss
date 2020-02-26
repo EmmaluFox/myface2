@@ -1,16 +1,19 @@
 @import 'Constants.scss';
-
+@import 'reset.css';
 body{
-  text-decoration: inherit;
   background-color: $mainBackgroundColor;
   font-family: $headingFont;
+
 }
 
 .logo {
+
   font-family: $logoFont;
+}
+.App-header {
+  @include pageHeading(#ff009e);
 }
 
 .navLink {
-  
   @include navLink();
 }
