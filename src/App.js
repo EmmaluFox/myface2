@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.scss';
 import './Constants.scss';
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, Link, NavLink} from 'react-router-dom';
 
 function App() {
   return (
       <Router>
             <div className="App">
           <h1 className="logo">MyFace</h1>
-              
+              <NavLink className="navLink" to="/posts">Posts</NavLink>
               <Switch>
                   <Route path="/posts">
                           {/*<PostsPage/>*/}

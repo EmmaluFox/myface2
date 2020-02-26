@@ -8,6 +8,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 $logoFont: plexifont_bvregular;
 $headingFont: Roboto;
+@mixin navLink($color: white) {
+  text-decoration-line: none;
+  font-family: $headingFont;
+  color: $color;
+}
 
 //Frames
 
