@@ -12,7 +12,7 @@ function App() {
               <NavLink className="navLink" to="/posts">Posts</NavLink>
               <Switch>
                   <Route path="/posts">
-                         {AllPosts}
+                         <AllPosts/>
                   <div className="all-posts-container">
                       <header className="App-header">
                           All Posts
