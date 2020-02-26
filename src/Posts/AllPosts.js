@@ -1,27 +1,23 @@
-﻿import React, {Component, ReactChildren as post, useEffect, useState} from "react";
-import {scryRenderedDOMComponentsWithTag} from "react-dom/test-utils";
-import Components from "../components";
+﻿import React from "react";
 
 
 function AllPosts(props) {
 
-    const [data, setData] = useState([]);
-    useEffect(() => {
-        fetch('https://localhost:5001/posts')
-            .then(response => response.json())
-            .then(jsonData => {
-                setData(jsonData.items)
-            });
-    }, []);
-    
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+    };
 
-
+    let postList = [];
+    fetch("https://localhost:5001/posts", requestOptions)
+        .then(response => response.items.map((value, index, array) => (this.value,this.index,postList[this.index])))
+        .then(result => postList.push(result))
+        .catch(error => console.log('error', error));
     
     return (
         <h2 className="App-header">
             All Posts
-
-            {data.map(posts => Components(posts))}
+            {postList.length}
         </h2>
     )
         ;
