@@ -1,0 +1,11 @@
+@import 'Constants.scss';
+
+
+body{
+  background-color: $mainBackgroundColor;
+  font-family: $headingFont;
+}
+
+.logo {
+  font-family: $logoFont;
+}

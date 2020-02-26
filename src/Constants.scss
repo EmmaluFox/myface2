@@ -1,0 +1,22 @@
+//Typography
+@font-face {
+  font-family: 'plexifont_bvregular';
+  src: url('plexifont-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+$logoFont: plexifont_bvregular;
+$headingFont: Roboto;
+
+//Frames
+
+
+//Colours
+$mainBackgroundColor: rgba(154, 255, 176, 0.99);
+
+
+
+
+
+
