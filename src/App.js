@@ -4,6 +4,7 @@ import './Constants.scss';
 import {BrowserRouter as Router, Switch, Route, Link, NavLink} from 'react-router-dom';
 import {AllPosts} from "./Posts/AllPosts";
 import {Post} from "./Posts/Post";
+import {AllUsers} from "./Users/AllUsers";
 
 function App() {
   return (
@@ -16,17 +17,14 @@ function App() {
                 </div>
               <Switch>
                   <Route path="/posts">
-                  <div className="all-posts-container">
+                  <div className="page-container">
                       <AllPosts/>
                       <Post className="post-container"/>
                   </div>
                   </Route>
-                  
                   <Route path="/users">
-                      <div className="all-users-container">
-                          <header className="App-header">
-                              All Users
-                          </header>
+                      <div className="page-container">
+                          <AllUsers/>
                       </div> 
                   </Route>
               

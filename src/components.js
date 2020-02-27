@@ -1,6 +1,5 @@
 ﻿import React from "react";
-import {ApiReader, ImageUrl, Message} from "./Components/ApiReader";
-import UserName from './Components/UserName';
+import {ApiPostsReader, ImageUrl, Message} from "./Components/ApiReaders";
 import PostedBy from './Components/PostedBy';
 
 
@@ -24,8 +23,5 @@ export default posts => {
             key: posts.key,
             posts: posts.component
         });
-        
     }
-    
-    
 }

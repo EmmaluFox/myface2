@@ -1,5 +1,5 @@
 ﻿import React from "react";
-import {ApiReader} from "./ApiReader";
+import {ApiPostsReader} from "./ApiReaders";
 import {Components as posts} from "../components";
 import UserName from "./UserName";
 
@@ -25,6 +25,6 @@ const PostedBy = {
 export default props => (
     <div className="postedBy">
         <hr />
-        <h2>{ApiReader(posts)}</h2>
+        <h2>{ApiPostsReader(posts)}</h2>
     </div>
 );
