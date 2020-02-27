@@ -1,23 +1,14 @@
-﻿import React from "react";
+﻿import React, {useEffect, useState} from "react";
+import {ApiReader} from "../Components/ApiReader";
 
 
 function AllPosts(props) {
-
-    var requestOptions = {
-        method: 'GET',
-        redirect: 'follow'
-    };
-
-    let postList = [];
-    fetch("https://localhost:5001/posts", requestOptions)
-        .then(response => response.items.map((value, index, array) => (this.value,this.index,postList[this.index])))
-        .then(result => postList.push(result))
-        .catch(error => console.log('error', error));
+    
     
     return (
         <h2 className="App-header">
             All Posts
-            {postList.length}
+            {ApiReader(props.postedBy)}
         </h2>
     )
         ;
