@@ -14,7 +14,8 @@ export function ApiReader() {
     return (
         <div>
             {posts.map(post => <Message data={post}/>)}
-            {posts.map(post => <ImageUrl photos={post}/>)}
+            {posts.map(post => <ImageUrl data={post}/>)}
+            {posts.map(post => <Id data={post}/>)}
         </div>
     );
 }
@@ -27,8 +28,14 @@ export function Message(props) {
 
 export function ImageUrl(props) {
     return (
-        <img alt="post-image" src={props.photos.imageUrl}/>
+        <img alt="post-image" src={props.data.imageUrl}/>
     );
 }
+export function Id(props) {
+    return (
+        <div>{props.data.id}</div>
+    );
+}
+        
 
  
