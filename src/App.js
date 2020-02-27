@@ -3,6 +3,7 @@ import './App.scss';
 import './Constants.scss';
 import {BrowserRouter as Router, Switch, Route, Link, NavLink} from 'react-router-dom';
 import {AllPosts} from "./Posts/AllPosts";
+import {Post} from "./Posts/Post";
 
 function App() {
   return (
@@ -12,11 +13,9 @@ function App() {
               <NavLink className="navLink" to="/posts">Posts</NavLink>
               <Switch>
                   <Route path="/posts">
-                         <AllPosts/>
                   <div className="all-posts-container">
-                      <header className="App-header">
-                          All Posts
-                      </header>
+                      <AllPosts/>
+                      <Post/>
                   </div>
                   </Route>
                   

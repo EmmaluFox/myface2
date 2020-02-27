@@ -3,15 +3,9 @@ import {ApiReader} from "../Components/ApiReader";
 import PostedBy from "../Components/PostedBy";
 
 
-
-function AllPosts(posts) {
+export function Post(props){
     
-    return (
-        <header className="App-header">All Posts</header>
-        
-    )
-        ;
-    
-}
 
-export {AllPosts};
+return(
+    <div>{PostedBy(ApiReader)}</div>
+)}

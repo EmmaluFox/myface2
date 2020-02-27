@@ -9,7 +9,12 @@
 $logoFont: plexifont_bvregular;
 $headingFont: plexifont_bvregular;
 $mainFont: Roboto;
+$mainFontSize: 2vw;
 
+@mixin mainFont($color: black, $font-weight: normal) {
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+}
 
 //Navigation
 @mixin navLink($color: white) {
