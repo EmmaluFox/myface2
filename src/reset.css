@@ -1,8 +1,4 @@
-* {
-  text-decoration: none;
-  color: inherit;
-}
-
+﻿
 /* Box sizing rules */
 *,
 *::before,
@@ -13,11 +9,12 @@
 /* Remove default padding */
 ul[class],
 ol[class] {
-  padding: 0;
+  padding: unset;
 }
 
 /* Remove default margin */
 body,
+a,
 h1,
 h2,
 h3,
@@ -29,8 +26,13 @@ figure,
 blockquote,
 dl,
 dd {
-  margin: 0;
-  
+  margin: unset;
+  font-size: unset;
+  text-decoration: unset;
+  font-weight: unset;
+  margin-block-start: unset;
+  margin-block-end: unset;
+  display: unset;
 }
 
 /* Set core body defaults */
@@ -74,14 +76,5 @@ select {
 /* Blur images when they have no alt attribute */
 img:not([alt]) {
   filter: blur(10px);
-}
 
-/* Remove all animations and transitions for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
 }

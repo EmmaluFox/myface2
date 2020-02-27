@@ -1,44 +1,56 @@
-//Typography
-@font-face {
-  font-family: 'plexifont_bvregular';
-  src: url('plexifont-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-$logoFont: plexifont_bvregular;
-$headingFont: plexifont_bvregular;
-$mainFont: Roboto;
-$mainFontSize: 2vw;
-
-@mixin mainFont($color: black, $font-weight: normal) {
-  font-family: $mainFont;
-  font-size: $mainFontSize;
-}
-
-//Navigation
-@mixin navLink($color: white) {
-  text-decoration-line: none;
-  font-family: $mainFont;
-  color: $color;
-}
-
-//Headings
-@mixin pageHeading($color: #ff009e) {
-  font-family: $headingFont;
-  font-weight: bold;
-  color: $color;
-}
-
-//Frames
-
-
-//Colours
-$mainBackgroundColor: rgba(154, 255, 176, 0.99);
-$accentColor: #ff009e;
-
-
-
-
-
-
+  //Typography
+  @font-face {
+    font-family: 'plexifont_bvregular';
+    src: url('plexifont-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+  
+  $scale: 1vw;
+  $logoFont: plexifont_bvregular;
+  $logoFontSize: ($scale*5);
+  $headingFont: plexifont_bvregular;
+  $mainFont: Roboto;
+  $mainFontSize: ($scale);
+  $headingFontSize: ($scale*3);
+  
+  @mixin mainFont($color: black, $font-weight: light) {
+    font-family: $mainFont;
+    font-size: $mainFontSize;
+  }
+  @mixin logo() {
+    font-family: $logoFont;
+    font-size: $logoFontSize;
+    font-weight: bolder;
+    color: black;
+  }
+  
+  //Navigation
+  @mixin navLink($color: white) {
+    text-decoration-line: none;
+    font-family: $mainFont;
+    font-size: $headingFontSize;
+    color: $color;
+  }
+  
+  //Headings
+  @mixin pageHeading($color: #ff009e) {
+    font-family: $headingFont;
+    font-weight: bold;
+    font-size: $headingFontSize;
+    color: $color;
+  }
+  
+  //Frames
+  
+  
+  //Colours
+  $mainBackgroundColor: rgba(154, 255, 176, 0.99);
+  $accentColor: #ff009e;
+  
+  
+  
+  
+  
+  
