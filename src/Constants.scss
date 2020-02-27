@@ -26,6 +26,7 @@
     color: black;
   }
   
+  
   //Navigation
   .navBar {
     display: flex;
@@ -53,6 +54,7 @@
   
   @mixin postBox() {
     background-color: white;
+   
   }
   
   //Frames

@@ -20,7 +20,7 @@ function App() {
                 <Route path="/posts">
                     <div className="page-container">
                         <AllPosts/>
-                        <Post className="post-container"/>
+                        <Post className="postContainer"/>
                     </div>
                 </Route>
                 <Route path="/users">

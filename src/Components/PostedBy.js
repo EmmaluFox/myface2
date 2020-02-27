@@ -20,6 +20,7 @@ useEffect(() => {
 function Post(props) {
     return (
         <div>
+            <div>{props.data.id}</div>
             <div>{props.data.message}</div>
             <div>{props.data.postedAt}</div>
             <img alt="post-image" src={props.data.imageUrl}/>

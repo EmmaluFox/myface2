@@ -31,7 +31,7 @@ export function ApiUsersReader() {
 
     return (
         <div>
-            {users.map(user => <DisplayName userData={user}/>)}
+            {users.map(user => <DisplayName userData={user}/>).sort((id) => id.min)}
 
         </div>
     );
@@ -57,7 +57,12 @@ export function Id(props) {
 
 export function DisplayName(props) {
     return (
-        <div>{props.userData.displayName}</div>
+        
+        <div>
+            <div className="userProfile">
+                <li>{props.userData.id} {props.userData.displayName}</li>
+            </div>
+        </div>
     );
 }
         
