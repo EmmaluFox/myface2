@@ -10,7 +10,10 @@ function App() {
       <Router>
             <div className="App">
           <Link className="logo" to="./"><h1>MyFace</h1></Link>
+                <div className="navBar">
               <NavLink className="navLink" to="/posts">Posts</NavLink>
+                <NavLink className="navLink" to="/users">Users</NavLink>
+                </div>
               <Switch>
                   <Route path="/posts">
                   <div className="all-posts-container">

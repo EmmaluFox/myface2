@@ -9,11 +9,11 @@
   
   $scale: 2vw;
   $logoFont: plexifont_bvregular;
-  $logoFontSize: ($scale*4);
+  $logoFontSize: ($scale*5);
   $headingFont: plexifont_bvregular;
   $mainFont: Roboto;
   $mainFontSize: ($scale);
-  $headingFontSize: ($scale*3);
+  $headingFontSize: ($scale*4);
   
   @mixin mainFont($color: black, $font-weight: light) {
     font-family: $mainFont;
@@ -27,8 +27,17 @@
   }
   
   //Navigation
+  .navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90vw;
+    
+  }
   @mixin navLink($color: white) {
     text-decoration-line: none;
+    align-items: flex-start;
     font-family: $mainFont;
     font-size: $headingFontSize;
     color: $color;
