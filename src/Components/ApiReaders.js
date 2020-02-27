@@ -31,9 +31,8 @@ export function ApiUsersReader() {
 
     return (
         <div>
-            {/*{users.map(user => <Posts userData={user}/>)}*/}
             {users.map(user => <DisplayName userData={user}/>)}
-            {/*{users.map(user => <userId userData={user}/>)}*/}
+
         </div>
     );
 }
@@ -55,11 +54,6 @@ export function Id(props) {
     );
 }
 
-// export function Posts(props) {
-//     return (
-//         <div>{props.userData.posts}</div>
-//     );
-// }
 
 export function DisplayName(props) {
     return (

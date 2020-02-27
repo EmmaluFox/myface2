@@ -1,30 +1,29 @@
-﻿import React from "react";
-import {ApiPostsReader} from "./ApiReaders";
-import {Components as posts} from "../components";
-import UserName from "./UserName";
+﻿import React, {useEffect, useState} from "react";
 
 
-let Id;
-let FirstName;
-let LastName;
-let DisplayName;
-let Email;
-let ProfileImageUrl;
-let CoverImageUrl;
+export function PostReader(props) {
+    const [posts, setPosts] = useState([]);
+useEffect(() => {
+        fetch("https://localhost:5001/posts")
+            .then(response => response.json())
+            .then(jsonData => {
+                setPosts(jsonData.items)
+            });
+    }, []);
+    return (
+        <div>
+            {posts.map(post => <Post data={post}/>)}
+        </div>
+    );
+}
 
-const PostedBy = {
-    id: Id,
-    firstName: FirstName,
-    lastName: LastName,
-    displayName: DisplayName,
-    username: UserName,
-    email: Email,
-    profileImageUrl: ProfileImageUrl,
-    coverImageUrl: CoverImageUrl
-};
-export default props => (
-    <div className="postedBy">
-        <hr />
-        <h2>{ApiPostsReader(posts)}</h2>
-    </div>
-);
+function Post(props) {
+    return (
+        <div>
+            <div>{props.data.message}</div>
+            <div>{props.data.postedAt}</div>
+            <img alt="post-image" src={props.data.imageUrl}/>
+            
+        </div>
+    );
+}

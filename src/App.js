@@ -10,29 +10,29 @@ import {Users} from "./Users/Users";
 function App() {
   return (
       <Router>
-            <div className="App">
-          <Link className="logo" to="./"><h1>MyFace</h1></Link>
-                <div className="navBar">
-              <NavLink className="navLink" to="/posts">Posts</NavLink>
+        <div className="App">
+            <Link className="logo" to="./"><h1>MyFace</h1></Link>
+            <div className="navBar">
+                <NavLink className="navLink" to="/posts">Posts</NavLink>
                 <NavLink className="navLink" to="/users">Users</NavLink>
-                </div>
-              <Switch>
-                  <Route path="/posts">
-                  <div className="page-container">
-                      <AllPosts/>
-                      <Post className="post-container"/>
-                  </div>
-                  </Route>
-                  <Route path="/users">
-                      <div className="page-container">
-                          <AllUsers/>
-                          <Users/>
-                      </div> 
-                  </Route>
-              
-      </Switch>
-          </div>
+            </div>
+            <Switch>
+                <Route path="/posts">
+                    <div className="page-container">
+                        <AllPosts/>
+                        <Post className="post-container"/>
+                    </div>
+                </Route>
+                <Route path="/users">
+                    <div className="page-container">
+                        <AllUsers/>
+                        <Users/>
+                    </div> 
+                </Route>
+            </Switch>
+        </div>
       </Router>
   );
 }
-    export default App;
+    
+export default App;
