@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Switch, Route, Link, NavLink} from 'react-route
 import {AllPosts} from "./Posts/AllPosts";
 import {Post} from "./Posts/Post";
 import {AllUsers} from "./Users/AllUsers";
+import {Users} from "./Users/Users";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
                   <Route path="/users">
                       <div className="page-container">
                           <AllUsers/>
+                          <Users/>
                       </div> 
                   </Route>
               

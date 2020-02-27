@@ -1,6 +1,7 @@
 ﻿import React from "react";
 import {ApiPostsReader, ImageUrl, Message} from "./Components/ApiReaders";
 import PostedBy from './Components/PostedBy';
+import {Users} from "./Users/Users";
 
 
 let Id;
@@ -8,6 +9,7 @@ let PostedAt;
 
 const Components = {
     postedBy: PostedBy,
+    users: Users,
     likes: [],
     dislikes: [],
     id: Id,

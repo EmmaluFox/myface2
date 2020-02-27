@@ -1,6 +1,5 @@
 ﻿import React, {useEffect, useState} from "react";
 
-
 export function ApiPostsReader() {
         const [posts, setPosts] = useState([]);
         useEffect(() => {
@@ -32,9 +31,9 @@ export function ApiUsersReader() {
 
     return (
         <div>
-            {users.map(user => <Message data={user}/>)}
-            {users.map(user => <ImageUrl data={user}/>)}
-            {users.map(user => <Id data={user}/>)}
+            {/*{users.map(user => <Posts userData={user}/>)}*/}
+            {users.map(user => <DisplayName userData={user}/>)}
+            {/*{users.map(user => <userId userData={user}/>)}*/}
         </div>
     );
 }
@@ -53,6 +52,18 @@ export function ImageUrl(props) {
 export function Id(props) {
     return (
         <div>{props.data.id}</div>
+    );
+}
+
+// export function Posts(props) {
+//     return (
+//         <div>{props.userData.posts}</div>
+//     );
+// }
+
+export function DisplayName(props) {
+    return (
+        <div>{props.userData.displayName}</div>
     );
 }
         
