@@ -1,8 +1,10 @@
 ﻿import React from "react";
-import Components from '../components';
+import {ApiReader} from "./ApiReader";
+import {Components as posts} from "../components";
+
 export default props => (
     <div className="postedBy">
         <hr />
-        <h2>{props.postedBy()}</h2>
+        <h2>{ApiReader(posts.postedBy)}</h2>
     </div>
 );

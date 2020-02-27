@@ -1,14 +1,13 @@
 ﻿import React, {useEffect, useState} from "react";
 import {ApiReader} from "../Components/ApiReader";
+import PostedBy from "../Components/PostedBy";
 
 
-function AllPosts(props) {
-    
+function AllPosts(posts) {
     
     return (
         <h2 className="App-header">
-            All Posts
-            {ApiReader(props.postedBy)}
+            {PostedBy(ApiReader)}
         </h2>
     )
         ;

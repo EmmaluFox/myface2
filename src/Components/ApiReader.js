@@ -2,7 +2,7 @@
 import Components from "../components";﻿
 
 
-export function ApiReader(props) {
+export function ApiReader(posts) {
         const [data, setData] = useState([]);
         useEffect(() => {
             fetch('https://localhost:5001/posts')
