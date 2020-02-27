@@ -7,5 +7,7 @@ export function Post(props){
     
 
 return(
+    <div className={"post-container"}>
     <div>{PostedBy(ApiReader)}</div>
+    </div>
 )}

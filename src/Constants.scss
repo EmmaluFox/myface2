@@ -42,6 +42,10 @@
     color: $color;
   }
   
+  @mixin postBox() {
+    background-color: white;
+  }
+  
   //Frames
   
   

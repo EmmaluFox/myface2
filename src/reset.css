@@ -13,7 +13,7 @@ ol[class] {
 }
 
 /* Remove default margin */
-body,
+html,
 a,
 h1,
 h2,
@@ -33,6 +33,8 @@ dd {
   margin-block-start: unset;
   margin-block-end: unset;
   display: unset;
+  color: unset;
+  background-color: unset;
 }
 
 /* Set core body defaults */

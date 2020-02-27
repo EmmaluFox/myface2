@@ -1,9 +1,15 @@
 @import 'Constants.scss';
 @import 'reset.css';
-  body {
+
+body {
     background-color: $mainBackgroundColor;
+    width: 100vw;
+    height: 100vh;
+    fill-opacity: 100%;
     @include mainFont();
+    color: black;
   }
+  
 
   .all-posts-container {
     display: flex;
@@ -28,4 +34,8 @@
   }
   div {
     @include mainFont();
+  }
+  
+  .postContainer {
+    @include postBox;
   }
