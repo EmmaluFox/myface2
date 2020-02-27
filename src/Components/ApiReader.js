@@ -10,18 +10,24 @@ export function ApiReader() {
                     setPosts(jsonData.items)
                 });
         }, []);
-
     
     return (
         <div>
-            {posts.map(post => <Post data={post}/>)}
+            {posts.map(post => <Message data={post}/>)}
+            {posts.map(post => <ImageUrl photos={post}/>)}
         </div>
     );
 }
 
-function Post(props) {
+export function Message(props) {
     return (
         <div>{props.data.message}</div>
+    );
+}
+
+export function ImageUrl(props) {
+    return (
+        <img alt="post-image" src={props.photos.imageUrl}/>
     );
 }
 

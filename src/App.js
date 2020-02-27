@@ -15,7 +15,7 @@ function App() {
                   <Route path="/posts">
                   <div className="all-posts-container">
                       <AllPosts/>
-                      <Post/>
+                      <Post className="post-container"/>
                   </div>
                   </Route>
                   

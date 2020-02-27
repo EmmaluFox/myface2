@@ -19,6 +19,7 @@ body {
   hr {
     color: white;
     background-color: $accentColor;
+    
   }
   .logo {
     @include logo;
