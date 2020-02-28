@@ -103,13 +103,20 @@ $navColor: white;
 
 //Forms
 @mixin forms() {
-  justify-content: center;
+
+  justify-content: flex-start;
+  align-items: baseline;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   font-size: $mainFontSize;
 }
 
 @mixin inputNew() {
   margin: $scale;
+  flex-shrink: $scale;
+  justify-content: space-between;
+  flex-wrap: wrap;
   
 }
   

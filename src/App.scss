@@ -63,6 +63,14 @@ body {
   @include forms()
 }
 
+form {
+  @include forms();
+}
+
 input {
-  @include inputNew()
+  @include inputNew();
+  justify-content: center;
+}
+label {
+  
 }
