@@ -51,6 +51,20 @@
     font-size: $headingFontSize;
     color: $color;
   }
+  @mixin userList() {
+    border-width: $scale;
+    border-color: $accentColor;
+    border-radius: ($scale)*2;
+    border-style: outset;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+    width: 90vw;
+    height: auto;
+  }
   
   @mixin postBox() {
     background-color: white;

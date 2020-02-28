@@ -30,9 +30,8 @@ export function ApiUsersReader() {
     }, []);
 
     return (
-        <div>
-            {users.map(user => <DisplayName userData={user}/>).sort((id) => id.min)}
-
+        <div className="userList">
+            {users.map(user => <User userData={user}/>)}
         </div>
     );
 }
@@ -55,13 +54,11 @@ export function Id(props) {
 }
 
 
-export function DisplayName(props) {
+export function User(props) {
     return (
-        
-        <div>
-            <div className="userProfile">
-                <li>{props.userData.id} {props.userData.displayName}</li>
-            </div>
+        <div className="user">
+            {props.userData.id} : {props.userData.displayName} 
+            <img alt="profile-image" src={props.userData.profileImageUrl}/>
         </div>
     );
 }
