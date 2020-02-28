@@ -22,9 +22,6 @@ function App() {
                         <AllPosts/>
                 </Route>
                 <Route path="/users">
-                    <Switch>
-                        <NewUser path="/users/new"/>
-                    </Switch>
                     <AllUsers/>
                 </Route>
             </Switch>
