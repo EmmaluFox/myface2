@@ -62,3 +62,7 @@ body {
 .newUserForm {
   @include forms()
 }
+
+input {
+  @include inputNew()
+}

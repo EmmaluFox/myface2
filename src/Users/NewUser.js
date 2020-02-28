@@ -21,10 +21,9 @@ export function NewUser() {
     
             return (
                 <form className="newUserForm" onSubmit={handleSubmit}>
-                    <label>New User:</label>
-                        <input  type="text" value={firstName} onChange={newFirstName}/>
-                        <input  type="text" value={lastName} onChange={newLastName}/>
-                        <input  type="text" value={email} onChange={newEmail}/>
+                    <label>First Name:<input  type="text" value={firstName} onChange={newFirstName}/></label>
+                    <label>Last Name: <input  type="text" value={lastName} onChange={newLastName}/></label>
+                    <label>Email:  <input  type="text" value={email} onChange={newEmail}/></label>
                         <input type="submit" value="Submit"/></form>)
         ;}
                 

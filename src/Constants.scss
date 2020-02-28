@@ -104,7 +104,13 @@ $navColor: white;
 //Forms
 @mixin forms() {
   justify-content: center;
+  display: flex;
   font-size: $mainFontSize;
+}
+
+@mixin inputNew() {
+  margin: $scale;
+  
 }
   
  
