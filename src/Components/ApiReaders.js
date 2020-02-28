@@ -12,9 +12,7 @@ export function ApiPostsReader() {
     
     return (
         <div>
-            {posts.map(post => <Message data={post}/>)}
-            {posts.map(post => <ImageUrl data={post}/>)}
-            {posts.map(post => <Id data={post}/>)}
+            {posts.map(post => <Post data={post}/>)}
         </div>
     );
 }
@@ -36,27 +34,18 @@ export function ApiUsersReader() {
     );
 }
 
-export function Message(props) {
+export function Post(props) {
     return (
-        <div>{props.data.message}</div>
+        <div className="singleEntry">{props.data.message}
+            {props.data.id}
+            <img className="post-image" alt="post-image" src={props.data.imageUrl}/>
+        </div>
     );
 }
-
-export function ImageUrl(props) {
-    return (
-        <img alt="post-image" src={props.data.imageUrl}/>
-    );
-}
-export function Id(props) {
-    return (
-        <div>{props.data.id}</div>
-    );
-}
-
 
 export function User(props) {
     return (
-        <div className="user">
+        <div className="singleEntry">
             {props.userData.id} : {props.userData.displayName} 
             <img className="profile-image" alt="profile-image" src={props.userData.profileImageUrl}/>
         </div>

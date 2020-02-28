@@ -1,4 +1,10 @@
-  //Typography
+//Colours
+$mainBackgroundColor: rgba(154, 255, 176, 0.99);
+$accentColor: #ff009e;  
+$textColor: black;
+$navColor: white;
+
+//Typography
   @font-face {
     font-family: 'plexifont_bvregular';
     src: url('plexifont-webfont.woff') format('woff');
@@ -15,7 +21,7 @@
   $mainFontSize: ($scale);
   $headingFontSize: ($scale*4);
   
-  @mixin mainFont($color: black, $font-weight: light) {
+  @mixin mainFont($color: $textColor, $font-weight: light) {
     font-family: $mainFont;
     font-size: $mainFontSize;
   }
@@ -23,7 +29,7 @@
     font-family: $logoFont;
     font-size: $logoFontSize;
     font-weight: bolder;
-    color: black;
+    color: $textColor;
   }
   
   
@@ -36,7 +42,7 @@
     width: 90vw;
     
   }
-  @mixin navLink($color: white) {
+  @mixin navLink($color: $navColor) {
     text-decoration-line: none;
     align-items: flex-start;
     font-family: $mainFont;
@@ -45,13 +51,25 @@
   }
   
   //Headings
-  @mixin pageHeading($color: #ff009e) {
+  @mixin pageHeading($color: $accentColor) {
     font-family: $headingFont;
     font-weight: bold;
     font-size: $headingFontSize;
     color: $color;
   }
   
+  //Frames
+  @mixin image($width: auto, $height: auto) {
+    border-width: $scale*0.75;
+    max-width: $scale*75;
+    border-style: outset;
+    border-color: $accentColor;
+    border-radius: $scale;
+  }
+  @mixin singleEntry() {
+    font-weight: bold;
+    padding: ($scale)*.75;
+  }
   @mixin itemContainer() {
     border-width: ($scale)*.75;
     border-color: $accentColor;
@@ -68,17 +86,6 @@
   }
   
  
-  @mixin user() {
-   font-weight: bold;
-   padding: ($scale)*.75;
-  }
-  
-  //Frames
-  
-  
-  //Colours
-  $mainBackgroundColor: rgba(154, 255, 176, 0.99);
-  $accentColor: #ff009e;
   
   
   

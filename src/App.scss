@@ -7,7 +7,7 @@ body {
     height: 100vh;
     fill-opacity: 100%;
     @include mainFont();
-    color: black;
+    color: $textColor;
   }
   
 
@@ -17,7 +17,7 @@ body {
     align-items: center;
   }
   hr {
-    color: white;
+    color: $navColor;
     background-color: $accentColor;
     
   }
@@ -40,12 +40,12 @@ body {
 .itemContainer {
   @include itemContainer;
 }
-.user {
-  @include user;
+.singleEntry {
+  @include singleEntry;
 }
 .profile-image {
-  border-width: $scale*0.75;
-  border-style: outset;
-  border-color: $accentColor;
-  border-radius: $scale;
+  @include image;
+}
+.post-image {
+  @include image($scale*5, $scale*5);
 }
