@@ -37,9 +37,15 @@ body {
     @include mainFont();
   }
   
-  .postContainer {
-    @include postBox;
-  }
-.userList {
-  @include userList;
+.itemContainer {
+  @include itemContainer;
+}
+.user {
+  @include user;
+}
+.profile-image {
+  border-width: $scale*0.75;
+  border-style: outset;
+  border-color: $accentColor;
+  border-radius: $scale;
 }

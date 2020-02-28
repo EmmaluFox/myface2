@@ -30,7 +30,7 @@ export function ApiUsersReader() {
     }, []);
 
     return (
-        <div className="userList">
+        <div className="itemContainer">
             {users.map(user => <User userData={user}/>)}
         </div>
     );
@@ -58,7 +58,7 @@ export function User(props) {
     return (
         <div className="user">
             {props.userData.id} : {props.userData.displayName} 
-            <img alt="profile-image" src={props.userData.profileImageUrl}/>
+            <img className="profile-image" alt="profile-image" src={props.userData.profileImageUrl}/>
         </div>
     );
 }

@@ -19,12 +19,12 @@ useEffect(() => {
 
 function Post(props) {
     return (
-        <div>
-            <div>{props.data.id}</div>
-            <div>{props.data.message}</div>
-            <div>{props.data.postedAt}</div>
+        <div className="itemContainer">
+            {props.data.id}
+            {props.data.message}
+            {props.data.postedAt}
             <img alt="post-image" src={props.data.imageUrl}/>
-            
         </div>
+            
     );
 }
