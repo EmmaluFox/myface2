@@ -15,11 +15,11 @@ $navColor: white;
   
   $scale: 1vw;
   $logoFont: plexifont_bvregular;
-  $logoFontSize: ($scale*5);
+  $logoFontSize: ($scale*7);
   $headingFont: plexifont_bvregular;
   $mainFont: Roboto;
   $mainFontSize: ($scale);
-  $headingFontSize: ($scale*4);
+  $headingFontSize: ($scale*5);
   
   @mixin mainFont($color: $textColor, $font-weight: light) {
     font-family: $mainFont;
