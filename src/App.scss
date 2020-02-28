@@ -37,9 +37,15 @@ body {
     @include mainFont();
   }
   
-.itemContainer {
-  @include itemContainer;
+.postsContainer {
+  @include itemContainer();
 }
+.usersContainer {
+  @include itemContainer();
+  justify-content: space-evenly;
+}
+
+
 .singleEntry {
   @include singleEntry;
 }
@@ -48,4 +54,11 @@ body {
 }
 .post-image {
   @include images();
+}
+.newUserLink {
+  @include newUserLink()
+}
+
+.newUserForm {
+  @include forms()
 }

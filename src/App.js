@@ -6,6 +6,7 @@ import {AllPosts} from "./Posts/AllPosts";
 import {Post} from "./Posts/Post";
 import {AllUsers} from "./Users/AllUsers";
 import {Users} from "./Users/Users";
+import {NewUser} from "./Users/NewUser";
 
 function App() {
   return (
@@ -21,7 +22,10 @@ function App() {
                         <AllPosts/>
                 </Route>
                 <Route path="/users">
-                        <AllUsers/>
+                    <Switch>
+                        <NewUser path="/users/new"/>
+                    </Switch>
+                    <AllUsers/>
                 </Route>
             </Switch>
         </div>

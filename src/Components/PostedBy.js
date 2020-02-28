@@ -19,10 +19,9 @@ useEffect(() => {
 
 function Post(props) {
     return (
-        <div className="itemContainer">
-            {props.data.id}
-            {props.data.message}
-            {props.data.postedAt}
+        <div className="postsContainer">
+            <text className="postMessage">{props.data.message}</text>
+            <text className="timePosted">{props.data.postedAt}</text>
             <img alt="post-image" src={props.data.imageUrl}/>
         </div>
             

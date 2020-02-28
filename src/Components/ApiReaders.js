@@ -28,7 +28,7 @@ export function ApiUsersReader() {
     }, []);
 
     return (
-        <div className="itemContainer">
+        <div className="usersContainer">
             {users.map(user => <User userData={user}/>)}
         </div>
     );
