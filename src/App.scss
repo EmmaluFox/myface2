@@ -44,8 +44,8 @@ body {
   @include singleEntry;
 }
 .profile-image {
-  @include image;
+  @include images();
 }
 .post-image {
-  @include image($scale*5, $scale*5);
+  @include images();
 }

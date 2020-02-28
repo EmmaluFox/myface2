@@ -59,9 +59,12 @@ $navColor: white;
   }
   
   //Frames
-  @mixin image($width: auto, $height: auto) {
+  @mixin images() {
+    max-width: 50%;
+    max-height: 50%;
+    display: block;
     border-width: $scale*0.75;
-    max-width: $scale*75;
+    margin: $scale*0.75;
     border-style: outset;
     border-color: $accentColor;
     border-radius: $scale;
