@@ -19,7 +19,7 @@ $navColor: white;
   $headingFont: plexifont_bvregular;
   $mainFont: Roboto;
   $mainFontSize: ($scale*1.5);
-  $headingFontSize: ($scale*5);
+  $headingFontSize: ($scale*6);
   
   @mixin mainFont($color: $textColor, $font-weight: light) {
     font-family: $mainFont;
@@ -50,18 +50,19 @@ $navColor: white;
     color: $color;
   }
 
-@mixin newUserLink() {
+@mixin createButton() {
   border-width: ($scale)*.75;
   border-color: $accentColor;
   border-radius: ($scale)*1;
+  height: 4.5*$scale;
+  width: 12*$scale;
   border-style: outset;
   font-size: 2*$scale;
-  position: fixed;
-  right: 8*$scale;
-  top: 21*$scale;
   color: $navColor;
   font-weight: bold;
   background-color: $accentColor;
+  text-align: center;
+  text-justify: distribute-all-lines;
 }
   
   //Headings
@@ -103,17 +104,20 @@ $navColor: white;
 
 //Forms
 @mixin forms() {
-
-  justify-content: flex-start;
-  align-items: baseline;
   display: flex;
   flex-direction: row;
+  width: 90%;
+  justify-content: space-between;
   flex-wrap: wrap;
   font-size: $mainFontSize;
+  font-weight: bold;
 }
 
 @mixin inputNew() {
+  display: flex;
   margin: $scale;
+  padding: 0;
+  min-width: 28*$scale;
   flex-shrink: $scale;
   justify-content: space-between;
   flex-wrap: wrap;

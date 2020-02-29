@@ -29,11 +29,17 @@ export function NewUser() {
     
             return (
                 <form className="newUserForm" onSubmit={handleSubmit}>
-                    <label>First Name:  <input  type="text" value={firstName} onChange={newFirstName}/></label>
-                    <label>Last Name:   <input  type="text" value={lastName} onChange={newLastName}/></label>
-                    <label>Email:   <input  type="text" value={email} onChange={newEmail}/></label>
-                    <label>Profile Image Url:   <input  type="text" value={profileImageUrl} onChange={newProfileImageUrl}/></label>
-                    <label>Cover Image Url:   <input  type="text" value={coverImageUrl} onChange={newCoverImageUrl}/></label>
-                    <input type="submit" value="Submit"/></form>)
+                    <section className="formItem"><label>First Name:  </label>
+                        <input  type="text" value={firstName} onChange={newFirstName}/></section>
+
+                    <section className="formItem"><label>Last Name:  </label>
+                        <input  type="text" value={lastName} onChange={newLastName}/></section>
+                    <section className="formItem"><label>Email:  </label>
+                        <input  type="text" value={email} onChange={newEmail}/></section>
+                    <section className="formItem"><label>Profile Image:  </label>
+                        <input  type="text" value={profileImageUrl} onChange={newProfileImageUrl}/></section>
+                    <section className="formItem"><label>Cover Image:  </label>
+                        <input  type="text" value={coverImageUrl} onChange={newCoverImageUrl}/></section>
+                    <section className="formItem"><input className="submitButton" type="submit" value="Submit"/></section></form>)
         ;}
                 

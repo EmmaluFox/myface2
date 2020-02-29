@@ -36,19 +36,19 @@ export function ApiUsersReader() {
 
 export function Post(props) {
     return (
-        <div className="singleEntry">{props.data.message}
+        <article className="contentBlock">{props.data.message}
             {props.data.id}
             <img className="post-image" alt="post-image" src={props.data.imageUrl}/>
-        </div>
+        </article>
     );
 }
 
 export function User(props) {
     return (
-        <div className="singleEntry">
+        <article className="contentBlock">
             {props.userData.id} : {props.userData.displayName} 
             <img className="profile-image" alt="profile-image" src={props.userData.profileImageUrl}/>
-        </div>
+        </article>
     );
 }
         

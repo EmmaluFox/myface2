@@ -7,7 +7,7 @@ function AllUsers(users) {
     return (
         <div className="page-container">
         <header className="App-header">All Users</header>
-            <NavLink className="newUserLink" to="/users/new">New User</NavLink>
+            <NavLink className="newUserButton" to="/users/new">New User</NavLink>
             <Switch>
                 <NewUser path="/users/new"/>
             </Switch>

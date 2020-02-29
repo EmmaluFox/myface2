@@ -1,7 +1,9 @@
 @import 'Constants.scss';
 @import 'reset.css';
 
-body {
+
+//Main
+  body {
     background-color: $mainBackgroundColor;
     width: 100vw;
     height: 100vh;
@@ -9,68 +11,63 @@ body {
     @include mainFont();
     color: $textColor;
   }
-  
-
+  .App-header {
+    @include pageHeading($accentColor);
+  }
+  div {
+    @include mainFont();
+  }
+  .contentBlock {
+  @include singleEntry;
+  }
+  .postsContainer {
+    @include itemContainer();
+  }
+  .usersContainer {
+    @include itemContainer();
+    justify-content: space-evenly;
+  }
+  hr {
+    color: $navColor;
+    background-color: $accentColor;
+  }  
   .page-container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  hr {
-    color: $navColor;
-    background-color: $accentColor;
     
-  }
+    //Navigation, buttons & forms
   .logo {
     @include logo;
-   
   }
-  .App-header {
-    @include pageHeading($accentColor);
-  }
-  
   .navLink {
     @include navLink();
-    
   }
-  div {
-    @include mainFont();
+  .newUserButton {
+    @include createButton();
+    position: fixed;
+    right: 8*$scale;
+    top: 21*$scale;
   }
-  
-.postsContainer {
-  @include itemContainer();
-}
-.usersContainer {
-  @include itemContainer();
-  justify-content: space-evenly;
-}
+  .submitButton {
+    @include createButton;
+  }
+  .newUserForm {
+    @include forms()
+  }
+  form {
+    @include forms();
+  }
+  .formItem {
+    @include inputNew();
+  }
 
+  //Images
+  .profile-image {
+    @include images();
+  }
+  .post-image {
+    @include images();
+  }
 
-.singleEntry {
-  @include singleEntry;
-}
-.profile-image {
-  @include images();
-}
-.post-image {
-  @include images();
-}
-.newUserLink {
-  @include newUserLink()
-}
-
-.newUserForm {
-  @include forms()
-}
-
-form {
-  @include forms();
-}
-
-input {
-  @include inputNew();
-  justify-content: center;
-}
-label {
-  
-}
